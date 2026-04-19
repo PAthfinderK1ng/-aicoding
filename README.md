@@ -1,6 +1,6 @@
 # 求职申请管理看板
 
-一个面向大学生求职场景设计的静态网页作品，聚焦三个核心问题：
+一个面向大学生求职场景设计的轻量全栈作品，聚焦三个核心问题：
 
 - 多岗位并行申请时的进度混乱
 - 截止日期与面试安排容易遗漏
@@ -16,6 +16,8 @@
 - 拖拽交互：可直接拖动岗位卡片切换申请阶段
 - 筛选搜索：支持按关键词、类型、优先级、材料状态、阶段过滤
 - 新增申请：支持手动录入新的岗位卡片
+- Node 后端：提供岗位列表读取、新增、更新状态的 API
+- 本地持久化：数据写入 `data/applications.json`，刷新页面后仍然保留
 
 ## 研究后补强的设计点
 
@@ -29,21 +31,33 @@
 
 ## 如何运行
 
-这是一个无需依赖构建的静态项目，直接打开 [index.html](/Users/lkd/Desktop/美团/index.html) 即可查看。
-
-如果你想用本地服务预览，也可以在当前目录执行：
+推荐用 Node 启动完整版本：
 
 ```bash
-python3 -m http.server 8000
+npm start
 ```
 
-然后访问 `http://localhost:8000`。
+然后访问 `http://localhost:3000`。
+
+如果当前环境没有 `npm`，也可以直接执行：
+
+```bash
+node server.js
+```
+
+这个模式下会启用后端接口，并把数据持久化到 [applications.json](/Users/lkd/Desktop/美团/data/applications.json)。
+
+如果你只是想快速看静态演示，也可以直接打开 [index.html](/Users/lkd/Desktop/美团/index.html)。
+但 `file://` 模式下不会启用后端持久化，只会使用前端内置示例数据。
 
 ## 文件结构
 
 - [index.html](/Users/lkd/Desktop/美团/index.html)：页面结构
 - [style.css](/Users/lkd/Desktop/美团/style.css)：视觉样式与响应式布局
-- [script.js](/Users/lkd/Desktop/美团/script.js)：示例数据与页面交互
+- [script.js](/Users/lkd/Desktop/美团/script.js)：前端逻辑、渲染与 API 接入
+- [server.js](/Users/lkd/Desktop/美团/server.js)：Node HTTP 服务与 API
+- [applications.json](/Users/lkd/Desktop/美团/data/applications.json)：本地数据存储
+- [package.json](/Users/lkd/Desktop/美团/package.json)：启动脚本
 
 ## 适合测评时的讲解角度
 

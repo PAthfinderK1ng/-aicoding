@@ -51,7 +51,7 @@ const stagePlaybooks = {
   ]
 };
 
-const applications = [
+const seedApplications = [
   {
     id: 1,
     company: "美团",
@@ -240,8 +240,11 @@ const applications = [
   }
 ];
 
+let applications = [];
+const useApi = window.location.protocol !== "file:";
+
 const state = {
-  selectedId: applications[0].id,
+  selectedId: seedApplications[0].id,
   filters: {
     search: "",
     type: "all",
@@ -308,6 +311,78 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+function cloneSeedApplications() {
+  return JSON.parse(JSON.stringify(seedApplications));
+}
+
+async function loadApplications() {
+  if (!useApi) {
+    applications = cloneSeedApplications();
+    return;
+  }
+
+  try {
+    const response = await fetch("/api/applications");
+    if (!response.ok) {
+      throw new Error("Failed to load applications");
+    }
+
+    applications = await response.json();
+  } catch (error) {
+    console.error(error);
+    applications = cloneSeedApplications();
+  }
+}
+
+async function createApplication(application) {
+  if (!useApi) {
+    applications.unshift(application);
+    return application;
+  }
+
+  const response = await fetch("/api/applications", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(application)
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to create application");
+  }
+
+  return response.json();
+}
+
+async function patchApplication(id, patch) {
+  if (!useApi) {
+    const index = applications.findIndex((item) => item.id === id);
+    if (index !== -1) {
+      applications[index] = {
+        ...applications[index],
+        ...patch
+      };
+      return applications[index];
+    }
+    return null;
+  }
+
+  const response = await fetch(`/api/applications/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(patch)
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to update application");
+  }
+
+  return response.json();
 }
 
 function isClosedStage(stage) {
@@ -927,7 +1002,7 @@ function bindBoardEvents() {
       column.classList.remove("drag-over");
     });
 
-    column.addEventListener("drop", (event) => {
+    column.addEventListener("drop", async (event) => {
       event.preventDefault();
       column.classList.remove("drag-over");
       const dragging = document.querySelector(".kanban-card.dragging");
@@ -937,10 +1012,24 @@ function bindBoardEvents() {
       const target = applications.find((item) => item.id === id);
       if (!target) return;
 
-      target.stage = column.dataset.stage;
-      target.lastTouched = formatInputDate(TODAY);
-      if (!target.followUpDate && !isClosedStage(target.stage) && target.stage !== "wishlist") {
-        target.followUpDate = formatInputDate(addDays(TODAY, 3));
+      const patch = {
+        stage: column.dataset.stage,
+        lastTouched: formatInputDate(TODAY)
+      };
+
+      if (!target.followUpDate && !isClosedStage(patch.stage) && patch.stage !== "wishlist") {
+        patch.followUpDate = formatInputDate(addDays(TODAY, 3));
+      }
+
+      try {
+        const updated = await patchApplication(id, patch);
+        if (updated) {
+          const index = applications.findIndex((item) => item.id === id);
+          applications[index] = updated;
+        }
+      } catch (error) {
+        console.error(error);
+        return;
       }
 
       state.selectedId = id;
@@ -1004,11 +1093,11 @@ function bindControls() {
     elements.dialog.close();
   });
 
-  elements.form.addEventListener("submit", (event) => {
+  elements.form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const formData = new FormData(elements.form);
 
-    applications.unshift({
+    const nextApplication = {
       id: Date.now(),
       company: formData.get("company"),
       role: formData.get("role"),
@@ -1043,12 +1132,20 @@ function bindControls() {
         { name: "成绩单", status: "missing", version: "待准备" }
       ],
       interviews: []
-    });
+    };
 
-    state.selectedId = applications[0].id;
-    elements.form.reset();
-    elements.dialog.close();
-    render();
+    try {
+      const created = await createApplication(nextApplication);
+      if (useApi) {
+        applications.unshift(created);
+      }
+      state.selectedId = created.id;
+      elements.form.reset();
+      elements.dialog.close();
+      render();
+    } catch (error) {
+      console.error(error);
+    }
   });
 
   elements.focusUrgent.addEventListener("click", () => {
@@ -1058,5 +1155,10 @@ function bindControls() {
   });
 }
 
-bindControls();
-render();
+async function init() {
+  bindControls();
+  await loadApplications();
+  render();
+}
+
+init();
