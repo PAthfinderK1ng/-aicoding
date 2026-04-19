@@ -70,11 +70,21 @@ const seedApplications = [
     followUpDate: "2026-04-22",
     lastTouched: "2026-04-16",
     resumeVersion: "产品经理-v4",
+    jdUrl: "https://example.com/jobs/meituan-campus-pm",
     salary: "待沟通",
     fitNote: "业务匹配度高，二面重点会看增长与数据分析能力。",
     descriptionSnapshot:
       "负责校园业务方向的需求分析、跨团队推进与数据复盘，需要良好的结构化思维、用户洞察与协同能力。",
     notes: "一面通过，面试官重点追问增长案例和数据指标拆解。",
+    assessments: [
+      {
+        type: "人才测评",
+        title: "校园综合素质测评",
+        date: "2026-04-19",
+        reminderDate: "2026-04-18",
+        link: "https://example.com/assessments/meituan-campus"
+      }
+    ],
     materials: [
       { name: "简历", status: "complete", version: "产品经理-v4" },
       { name: "成绩单", status: "complete", version: "中英文盖章版" },
@@ -103,11 +113,21 @@ const seedApplications = [
     followUpDate: "2026-04-20",
     lastTouched: "2026-04-14",
     resumeVersion: "运营培训生-v3",
+    jdUrl: "https://example.com/jobs/tencent-ops-trainee",
     salary: "待沟通",
     fitNote: "岗位开放度高，但当前材料完整度不够，容易丢分。",
     descriptionSnapshot:
       "岗位要求对内容运营、数据敏感度和跨部门沟通有较高要求，需要具备项目经历和结果导向意识。",
     notes: "投递量较大，建议先补齐作品案例，再通过内推人跟进状态。",
+    assessments: [
+      {
+        type: "人才测评",
+        title: "胜任力测评",
+        date: "2026-04-21",
+        reminderDate: "2026-04-20",
+        link: "https://example.com/assessments/tencent-talents"
+      }
+    ],
     materials: [
       { name: "简历", status: "pending", version: "运营培训生-v3" },
       { name: "成绩单", status: "complete", version: "中英文盖章版" },
@@ -133,11 +153,21 @@ const seedApplications = [
     followUpDate: "2026-04-23",
     lastTouched: "2026-04-18",
     resumeVersion: "商业分析实习-v2",
+    jdUrl: "https://example.com/jobs/bytedance-business-analyst-intern",
     salary: "250-300/天",
     fitNote: "JD 匹配度高，测评完成度将直接影响后续面试机会。",
     descriptionSnapshot:
       "需要具备 SQL/Excel 基础、业务分析能力和跨团队协作意识，侧重增长分析和策略支持。",
     notes: "测评预计 45 分钟，包含数据判断题和案例阅读。",
+    assessments: [
+      {
+        type: "笔试",
+        title: "在线测评",
+        date: "2026-04-19",
+        reminderDate: "2026-04-18",
+        link: "https://example.com/assessments/bytedance-test"
+      }
+    ],
     materials: [
       { name: "简历", status: "complete", version: "商业分析实习-v2" },
       { name: "成绩单", status: "complete", version: "电子版" },
@@ -163,11 +193,21 @@ const seedApplications = [
     followUpDate: "",
     lastTouched: "2026-04-17",
     resumeVersion: "社区运营-v2",
+    jdUrl: "https://example.com/jobs/xiaohongshu-community-ops",
     salary: "180-220/天",
     fitNote: "内容调性匹配，但案例素材需要再补充。",
     descriptionSnapshot:
       "岗位偏重社区内容策划、活动运营和用户洞察，需要熟悉平台生态并能输出活动方案。",
     notes: "适合作为内容方向重点冲刺岗位，当前最大的阻碍是案例完整度不足。",
+    assessments: [
+      {
+        type: "人才测评",
+        title: "社区运营倾向测评",
+        date: "",
+        reminderDate: "2026-04-21",
+        link: "https://example.com/assessments/xhs-community"
+      }
+    ],
     materials: [
       { name: "简历", status: "complete", version: "社区运营-v2" },
       { name: "作品集", status: "pending", version: "社区项目集-v2" },
@@ -193,11 +233,21 @@ const seedApplications = [
     followUpDate: "2026-04-19",
     lastTouched: "2026-04-17",
     resumeVersion: "数据产品-v5",
+    jdUrl: "https://example.com/jobs/alibaba-data-pm",
     salary: "年包待确认",
     fitNote: "进入 offer 阶段，主要问题从“能不能拿到”转为“该不该接受”。",
     descriptionSnapshot:
       "聚焦数据产品规划、业务需求拆解和指标体系搭建，需要较强的数据分析和跨部门沟通能力。",
     notes: "已进入 offer 阶段，建议对比城市、团队方向和成长空间。",
+    assessments: [
+      {
+        type: "笔试",
+        title: "数据产品案例作业",
+        date: "2026-04-08",
+        reminderDate: "2026-04-07",
+        link: "https://example.com/assessments/alibaba-case"
+      }
+    ],
     materials: [
       { name: "简历", status: "complete", version: "数据产品-v5" },
       { name: "成绩单", status: "complete", version: "中英文盖章版" },
@@ -227,11 +277,21 @@ const seedApplications = [
     followUpDate: "",
     lastTouched: "2026-04-02",
     resumeVersion: "经营管理-v2",
+    jdUrl: "https://example.com/jobs/huawei-management",
     salary: "待沟通",
     fitNote: "岗位方向匹配，但群面节奏和案例表达是主要短板。",
     descriptionSnapshot:
       "岗位需要较强的商业判断、项目推进和跨团队协作能力，群面环节尤其看重结构化表达。",
     notes: "群面节奏偏快，后续可强化框架表达和时间控制。",
+    assessments: [
+      {
+        type: "人才测评",
+        title: "综合能力测评",
+        date: "2026-03-30",
+        reminderDate: "2026-03-29",
+        link: "https://example.com/assessments/huawei-talent"
+      }
+    ],
     materials: [
       { name: "简历", status: "complete", version: "经营管理-v2" },
       { name: "成绩单", status: "complete", version: "电子版" }
@@ -246,6 +306,7 @@ const useApi = window.location.protocol !== "file:";
 const state = {
   selectedId: seedApplications[0].id,
   activeView: "overview",
+  detailOpen: false,
   filters: {
     search: "",
     type: "all",
@@ -273,6 +334,9 @@ const elements = {
   stageFilter: document.getElementById("stage-filter"),
   dialog: document.getElementById("application-dialog"),
   form: document.getElementById("application-form"),
+  detailDrawer: document.getElementById("detail-drawer"),
+  drawerBackdrop: document.getElementById("drawer-backdrop"),
+  closeDrawer: document.getElementById("close-drawer"),
   openAdd: document.getElementById("open-add"),
   closeDialog: document.getElementById("close-dialog"),
   cancelDialog: document.getElementById("cancel-dialog"),
@@ -314,6 +378,27 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+function getSafeUrl(url) {
+  if (!url || typeof url !== "string") return "";
+  const trimmed = url.trim();
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return "";
+}
+
+function getAssessments(application) {
+  return Array.isArray(application.assessments) ? application.assessments : [];
+}
+
+function getUpcomingAssessment(application) {
+  return getAssessments(application)
+    .filter((item) => item.reminderDate || item.date)
+    .sort((left, right) => {
+      const leftDate = left.reminderDate || left.date;
+      const rightDate = right.reminderDate || right.date;
+      return parseDate(leftDate) - parseDate(rightDate);
+    })[0];
 }
 
 function cloneSeedApplications() {
@@ -455,6 +540,11 @@ function getDeadlineLabel(application) {
 }
 
 function getUrgencyReason(application) {
+  const assessment = getUpcomingAssessment(application);
+  if (assessment?.reminderDate && daysUntil(assessment.reminderDate) <= 1) {
+    return `${assessment.type}提醒临近，建议尽快打开链接完成 ${assessment.title}`;
+  }
+
   if (application.materials.some((item) => item.status === "missing")) {
     return "材料未齐，容易错过投递或影响通过率";
   }
@@ -482,10 +572,12 @@ function getUrgencyReason(application) {
 function getUrgencyScore(application) {
   let score = 0;
   const deadlineGap = daysUntil(application.deadline);
+  const assessment = getUpcomingAssessment(application);
 
   if (deadlineGap >= 0) score += Math.max(0, 20 - deadlineGap * 3);
   score += getMissingMaterialCount(application) * 18;
   if (isFollowUpSoon(application)) score += 22;
+  if (assessment?.reminderDate && daysUntil(assessment.reminderDate) <= 2) score += 20;
   if (application.stage === "interview") score += 14;
   if (application.stage === "written-test") score += 10;
   if (!hasDescriptionSnapshot(application)) score += 8;
@@ -499,6 +591,24 @@ function getFollowUpLabel(application) {
   if (gap < 0) return `已过 ${Math.abs(gap)} 天`;
   if (gap === 0) return "今天跟进";
   return `${gap} 天后跟进`;
+}
+
+function getAssessmentReminderLabel(assessment) {
+  const date = assessment?.reminderDate || assessment?.date;
+  if (!date) return "未安排测评";
+  const gap = daysUntil(date);
+  if (gap < 0) return `${assessment.type}已过 ${Math.abs(gap)} 天`;
+  if (gap === 0) return `${assessment.type}今天处理`;
+  return `${assessment.type}${gap} 天后`;
+}
+
+function renderLinkChip(url, label) {
+  const safeUrl = getSafeUrl(url);
+  if (!safeUrl) {
+    return `<span class="detail-note">未提供${escapeHtml(label)}</span>`;
+  }
+
+  return `<a class="link-chip" href="${escapeHtml(safeUrl)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
 }
 
 function getFilteredApplications() {
@@ -539,6 +649,14 @@ function setActiveView(view) {
   elements.viewPanels.forEach((panel) => {
     panel.classList.toggle("is-active", panel.dataset.viewPanel === view);
   });
+}
+
+function setDetailOpen(open) {
+  state.detailOpen = open;
+  elements.detailDrawer.classList.toggle("is-open", open);
+  elements.detailDrawer.setAttribute("aria-hidden", String(!open));
+  elements.drawerBackdrop.hidden = !open;
+  document.body.classList.toggle("drawer-open", open);
 }
 
 function renderStats(appList) {
@@ -698,6 +816,8 @@ function renderCard(application) {
   const priority = getPriority(application);
   const jdTag = hasDescriptionSnapshot(application) ? "JD 已存档" : "JD 待补";
   const followUpTag = application.followUpDate ? getFollowUpLabel(application) : "未安排跟进";
+  const assessment = getUpcomingAssessment(application);
+  const assessmentTag = assessment ? getAssessmentReminderLabel(assessment) : "";
 
   return `
     <article
@@ -740,6 +860,7 @@ function renderCard(application) {
         <span class="tag is-soft">${escapeHtml(application.resumeVersion || "简历待补")}</span>
         <span class="tag is-soft">${escapeHtml(jdTag)}</span>
         <span class="tag is-soft">${escapeHtml(followUpTag)}</span>
+        ${assessmentTag ? `<span class="tag is-soft">${escapeHtml(assessmentTag)}</span>` : ""}
       </div>
     </article>
   `;
@@ -772,7 +893,8 @@ function renderTimeline(appList) {
       {
         date: application.deadline,
         title: `${application.company} 截止投递`,
-        meta: `${application.role} · ${getDeadlineLabel(application)}`
+        meta: `${application.role} · ${getDeadlineLabel(application)}`,
+        applicationId: application.id
       }
     ];
 
@@ -780,15 +902,37 @@ function renderTimeline(appList) {
       result.push({
         date: application.followUpDate,
         title: `${application.company} 跟进提醒`,
-        meta: `${application.contactName} · ${application.contactRole}`
+        meta: `${application.contactName} · ${application.contactRole}`,
+        applicationId: application.id
       });
     }
+
+    getAssessments(application).forEach((assessment) => {
+      if (assessment.reminderDate) {
+        result.push({
+          date: assessment.reminderDate,
+          title: `${application.company} ${assessment.type}提醒`,
+          meta: `${assessment.title} · 建议提前打开链接确认要求`,
+          applicationId: application.id
+        });
+      }
+
+      if (assessment.date) {
+        result.push({
+          date: assessment.date,
+          title: `${application.company} ${assessment.type}`,
+          meta: `${assessment.title} · ${assessment.link ? "已附链接" : "待补链接"}`,
+          applicationId: application.id
+        });
+      }
+    });
 
     application.interviews.forEach((interview) => {
       result.push({
         date: interview.date,
         title: `${application.company} ${interview.label}`,
-        meta: `${application.role} · ${interview.result}`
+        meta: `${application.role} · ${interview.result}`,
+        applicationId: application.id
       });
     });
 
@@ -806,7 +950,7 @@ function renderTimeline(appList) {
   elements.timeline.innerHTML = timelineItems
     .map(
       (item) => `
-        <article class="timeline-item">
+        <article class="timeline-item is-clickable" data-application-id="${item.applicationId}">
           <div class="timeline-item__date">${escapeHtml(formatDate(item.date))}</div>
           <div class="timeline-item__title">${escapeHtml(item.title)}</div>
           <div class="timeline-item__meta">${escapeHtml(item.meta)}</div>
@@ -814,6 +958,8 @@ function renderTimeline(appList) {
       `
     )
     .join("");
+
+  bindTimelineEvents();
 }
 
 function getChecklist(application) {
@@ -833,6 +979,12 @@ function getChecklist(application) {
         ? `已安排跟进：${formatDate(application.followUpDate)}`
         : "补充下一次跟进时间",
       state: application.followUpDate ? "complete" : "pending"
+    },
+    {
+      label: getAssessments(application).length
+        ? `已配置 ${getAssessments(application).length} 个测评提醒`
+        : "补充笔试或人才测评提醒",
+      state: getAssessments(application).length ? "complete" : "pending"
     },
     {
       label: application.nextAction,
@@ -856,6 +1008,16 @@ function getInterviewStatusClass(result) {
   return "complete";
 }
 
+function bindTimelineEvents() {
+  document.querySelectorAll(".timeline-item[data-application-id]").forEach((item) => {
+    item.addEventListener("click", () => {
+      state.selectedId = Number(item.dataset.applicationId);
+      setDetailOpen(true);
+      render();
+    });
+  });
+}
+
 function renderDetail() {
   const application = applications.find((item) => item.id === state.selectedId);
 
@@ -869,6 +1031,8 @@ function renderDetail() {
   const snapshotText = hasDescriptionSnapshot(application)
     ? application.descriptionSnapshot
     : "当前还没有保存岗位描述，建议补一份 JD 快照，后续面试时会更好回忆岗位要求。";
+  const jdUrl = getSafeUrl(application.jdUrl);
+  const assessments = getAssessments(application);
 
   elements.detailPanel.className = "detail-panel";
   elements.detailPanel.innerHTML = `
@@ -892,8 +1056,12 @@ function renderDetail() {
         <p class="detail-note">${escapeHtml(application.source)}</p>
       </div>
       <div class="detail-block">
-        <div class="detail-block__label">简历版本</div>
+        <div class="detail-block__label">投递简历版本</div>
         <strong>${escapeHtml(application.resumeVersion || "待补充")}</strong>
+      </div>
+      <div class="detail-block">
+        <div class="detail-block__label">JD 链接</div>
+        ${jdUrl ? renderLinkChip(jdUrl, "打开 JD / 职位页") : '<span class="detail-note">未补充岗位原链接</span>'}
       </div>
       <div class="detail-block">
         <div class="detail-block__label">跟进提醒</div>
@@ -914,6 +1082,35 @@ function renderDetail() {
     <div class="detail-block">
       <div class="detail-block__label">岗位描述快照</div>
       <div class="snapshot">${escapeHtml(snapshotText)}</div>
+    </div>
+
+    <div class="detail-block">
+      <div class="detail-block__label">笔试 / 人才测评</div>
+      <div class="materials">
+        ${
+          assessments.length
+            ? assessments
+                .map(
+                  (assessment) => `
+                    <div class="material-item">
+                      <div class="material-subrow">
+                        <strong>${escapeHtml(assessment.type)} · ${escapeHtml(assessment.title)}</strong>
+                        <span class="status-pill pending">${escapeHtml(getAssessmentReminderLabel(assessment))}</span>
+                      </div>
+                      <span class="detail-note">
+                        ${escapeHtml(assessment.date ? `处理时间：${formatDate(assessment.date)}` : "处理时间待定")}
+                        ${assessment.reminderDate ? ` · 提醒：${formatDate(assessment.reminderDate)}` : ""}
+                      </span>
+                      <div class="link-list">
+                        ${renderLinkChip(assessment.link, `打开${assessment.type}链接`)}
+                      </div>
+                    </div>
+                  `
+                )
+                .join("")
+            : '<span class="detail-note">当前还没有笔试或人才测评安排。</span>'
+        }
+      </div>
     </div>
 
     <div class="detail-block">
@@ -995,7 +1192,7 @@ function bindBoardEvents() {
   cards.forEach((card) => {
     card.addEventListener("click", () => {
       state.selectedId = Number(card.dataset.id);
-      setActiveView("insights");
+      setDetailOpen(true);
       render();
     });
 
@@ -1063,6 +1260,7 @@ function ensureSelectedVisible(appList) {
 function render() {
   const filtered = getFilteredApplications();
   ensureSelectedVisible(filtered);
+  setDetailOpen(state.detailOpen);
   renderStats(filtered);
   renderHealth(filtered);
   renderActionCenter(filtered);
@@ -1108,6 +1306,20 @@ function bindControls() {
     });
   });
 
+  elements.drawerBackdrop.addEventListener("click", () => {
+    setDetailOpen(false);
+  });
+
+  elements.closeDrawer.addEventListener("click", () => {
+    setDetailOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && state.detailOpen) {
+      setDetailOpen(false);
+    }
+  });
+
   elements.openAdd.addEventListener("click", () => {
     elements.dialog.showModal();
   });
@@ -1146,10 +1358,22 @@ function bindControls() {
           : ""),
       lastTouched: formatInputDate(TODAY),
       resumeVersion: formData.get("resumeVersion") || "",
+      jdUrl: formData.get("jdUrl") || "",
       salary: "待补充",
       fitNote: "手动录入岗位，建议补充岗位描述、联系人和跟进节奏。",
-      descriptionSnapshot: "",
+      descriptionSnapshot: formData.get("descriptionSnapshot") || "",
       notes: formData.get("notes") || "暂无补充说明。",
+      assessments: formData.get("assessmentTitle")
+        ? [
+            {
+              type: "笔试 / 测评",
+              title: formData.get("assessmentTitle"),
+              date: "",
+              reminderDate: formData.get("assessmentReminderDate") || "",
+              link: formData.get("assessmentLink") || ""
+            }
+          ]
+        : [],
       materials: [
         {
           name: "简历",
@@ -1167,6 +1391,7 @@ function bindControls() {
         applications.unshift(created);
       }
       state.selectedId = created.id;
+      setDetailOpen(true);
       elements.form.reset();
       elements.dialog.close();
       render();

@@ -17,10 +17,20 @@
     "followUpDate": "2026-04-22",
     "lastTouched": "2026-04-16",
     "resumeVersion": "产品经理-v4",
+    "jdUrl": "https://example.com/jobs/meituan-campus-pm",
     "salary": "待沟通",
     "fitNote": "业务匹配度高，二面重点会看增长与数据分析能力。",
     "descriptionSnapshot": "负责校园业务方向的需求分析、跨团队推进与数据复盘，需要良好的结构化思维、用户洞察与协同能力。",
     "notes": "一面通过，面试官重点追问增长案例和数据指标拆解。",
+    "assessments": [
+      {
+        "type": "人才测评",
+        "title": "校园综合素质测评",
+        "date": "2026-04-19",
+        "reminderDate": "2026-04-18",
+        "link": "https://example.com/assessments/meituan-campus"
+      }
+    ],
     "materials": [
       {
         "name": "简历",
@@ -69,10 +79,20 @@
     "followUpDate": "2026-04-20",
     "lastTouched": "2026-04-14",
     "resumeVersion": "运营培训生-v3",
+    "jdUrl": "https://example.com/jobs/tencent-ops-trainee",
     "salary": "待沟通",
     "fitNote": "岗位开放度高，但当前材料完整度不够，容易丢分。",
     "descriptionSnapshot": "岗位要求对内容运营、数据敏感度和跨部门沟通有较高要求，需要具备项目经历和结果导向意识。",
     "notes": "投递量较大，建议先补齐作品案例，再通过内推人跟进状态。",
+    "assessments": [
+      {
+        "type": "人才测评",
+        "title": "胜任力测评",
+        "date": "2026-04-21",
+        "reminderDate": "2026-04-20",
+        "link": "https://example.com/assessments/tencent-talents"
+      }
+    ],
     "materials": [
       {
         "name": "简历",
@@ -110,10 +130,20 @@
     "followUpDate": "2026-04-23",
     "lastTouched": "2026-04-18",
     "resumeVersion": "商业分析实习-v2",
+    "jdUrl": "https://example.com/jobs/bytedance-business-analyst-intern",
     "salary": "250-300/天",
     "fitNote": "JD 匹配度高，测评完成度将直接影响后续面试机会。",
     "descriptionSnapshot": "需要具备 SQL/Excel 基础、业务分析能力和跨团队协作意识，侧重增长分析和策略支持。",
     "notes": "测评预计 45 分钟，包含数据判断题和案例阅读。",
+    "assessments": [
+      {
+        "type": "笔试",
+        "title": "在线测评",
+        "date": "2026-04-19",
+        "reminderDate": "2026-04-18",
+        "link": "https://example.com/assessments/bytedance-test"
+      }
+    ],
     "materials": [
       {
         "name": "简历",
@@ -157,10 +187,20 @@
     "followUpDate": "",
     "lastTouched": "2026-04-17",
     "resumeVersion": "社区运营-v2",
+    "jdUrl": "https://example.com/jobs/xiaohongshu-community-ops",
     "salary": "180-220/天",
     "fitNote": "内容调性匹配，但案例素材需要再补充。",
     "descriptionSnapshot": "岗位偏重社区内容策划、活动运营和用户洞察，需要熟悉平台生态并能输出活动方案。",
     "notes": "适合作为内容方向重点冲刺岗位，当前最大的阻碍是案例完整度不足。",
+    "assessments": [
+      {
+        "type": "人才测评",
+        "title": "社区运营倾向测评",
+        "date": "",
+        "reminderDate": "2026-04-21",
+        "link": "https://example.com/assessments/xhs-community"
+      }
+    ],
     "materials": [
       {
         "name": "简历",
@@ -198,10 +238,20 @@
     "followUpDate": "2026-04-19",
     "lastTouched": "2026-04-17",
     "resumeVersion": "数据产品-v5",
+    "jdUrl": "https://example.com/jobs/alibaba-data-pm",
     "salary": "年包待确认",
     "fitNote": "进入 offer 阶段，主要问题从“能不能拿到”转为“该不该接受”。",
     "descriptionSnapshot": "聚焦数据产品规划、业务需求拆解和指标体系搭建，需要较强的数据分析和跨部门沟通能力。",
     "notes": "已进入 offer 阶段，建议对比城市、团队方向和成长空间。",
+    "assessments": [
+      {
+        "type": "笔试",
+        "title": "数据产品案例作业",
+        "date": "2026-04-08",
+        "reminderDate": "2026-04-07",
+        "link": "https://example.com/assessments/alibaba-case"
+      }
+    ],
     "materials": [
       {
         "name": "简历",
@@ -255,10 +305,20 @@
     "followUpDate": "",
     "lastTouched": "2026-04-02",
     "resumeVersion": "经营管理-v2",
+    "jdUrl": "https://example.com/jobs/huawei-management",
     "salary": "待沟通",
     "fitNote": "岗位方向匹配，但群面节奏和案例表达是主要短板。",
     "descriptionSnapshot": "岗位需要较强的商业判断、项目推进和跨团队协作能力，群面环节尤其看重结构化表达。",
     "notes": "群面节奏偏快，后续可强化框架表达和时间控制。",
+    "assessments": [
+      {
+        "type": "人才测评",
+        "title": "综合能力测评",
+        "date": "2026-03-30",
+        "reminderDate": "2026-03-29",
+        "link": "https://example.com/assessments/huawei-talent"
+      }
+    ],
     "materials": [
       {
         "name": "简历",

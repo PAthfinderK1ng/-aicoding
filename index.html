@@ -45,7 +45,7 @@
             申请看板
           </button>
           <button class="section-tab" type="button" data-view-tab="insights">
-            时间线与详情
+            时间线
           </button>
         </nav>
 
@@ -140,39 +140,40 @@
                 <p class="section-heading__eyebrow">Flow Board</p>
                 <h2>申请进度总览</h2>
               </div>
-              <p class="section-heading__note">拖拽更新阶段，点击卡片后自动进入详情分栏</p>
+              <p class="section-heading__note">拖拽更新阶段，点击卡片会从右侧滑出详情抽屉</p>
             </div>
             <div id="kanban-board" class="kanban-board"></div>
           </section>
         </section>
 
         <section class="view-panel" data-view-panel="insights">
-          <section class="insights-grid">
-            <section class="card">
-              <div class="section-heading section-heading--compact">
-                <div>
-                  <p class="section-heading__eyebrow">Calendar</p>
-                  <h2>近期时间线</h2>
-                </div>
+          <section class="card">
+            <div class="section-heading section-heading--compact">
+              <div>
+                <p class="section-heading__eyebrow">Calendar</p>
+                <h2>近期时间线</h2>
               </div>
-              <div id="timeline" class="timeline"></div>
-            </section>
-
-            <section class="card">
-              <div class="section-heading section-heading--compact">
-                <div>
-                  <p class="section-heading__eyebrow">Details</p>
-                  <h2>岗位详情</h2>
-                </div>
-              </div>
-              <div id="detail-panel" class="detail-panel empty-state">
-                点击任意岗位卡片查看详细信息。
-              </div>
-            </section>
+              <p class="section-heading__note">点击时间节点也能打开岗位详情抽屉</p>
+            </div>
+            <div id="timeline" class="timeline"></div>
           </section>
         </section>
       </main>
     </div>
+
+    <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+    <aside id="detail-drawer" class="detail-drawer" aria-hidden="true">
+      <div class="detail-drawer__header">
+        <div>
+          <p class="section-heading__eyebrow">Details Drawer</p>
+          <h2>岗位详情</h2>
+        </div>
+        <button id="close-drawer" class="icon-btn" type="button">×</button>
+      </div>
+      <div id="detail-panel" class="detail-panel empty-state">
+        点击任意岗位卡片查看详细信息。
+      </div>
+    </aside>
 
     <dialog id="application-dialog" class="application-dialog">
       <form id="application-form" class="application-form" method="dialog">
@@ -217,6 +218,10 @@
             <input name="resumeVersion" placeholder="如：产品经理-v4" />
           </label>
           <label>
+            JD 链接
+            <input name="jdUrl" placeholder="职位原链接 / JD 页面" />
+          </label>
+          <label>
             下次跟进
             <input name="followUpDate" type="date" />
           </label>
@@ -231,7 +236,24 @@
               <option value="closed">已结束</option>
             </select>
           </label>
+          <label>
+            测评名称
+            <input name="assessmentTitle" placeholder="如：在线测评 / 人才测评" />
+          </label>
+          <label>
+            测评提醒
+            <input name="assessmentReminderDate" type="date" />
+          </label>
+          <label>
+            测评链接
+            <input name="assessmentLink" placeholder="笔试或测评链接" />
+          </label>
         </div>
+
+        <label>
+          JD 摘要
+          <textarea name="descriptionSnapshot" rows="3"></textarea>
+        </label>
 
         <label>
           下一步动作
