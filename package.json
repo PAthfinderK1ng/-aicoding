@@ -4,6 +4,8 @@
   "private": true,
   "description": "A lightweight full-stack campus job application tracker board.",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "reset-data": "node scripts/reset-data.js"
   }
 }

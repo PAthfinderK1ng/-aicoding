@@ -57,7 +57,26 @@ node server.js
 - [script.js](/Users/lkd/Desktop/美团/script.js)：前端逻辑、渲染与 API 接入
 - [server.js](/Users/lkd/Desktop/美团/server.js)：Node HTTP 服务与 API
 - [applications.json](/Users/lkd/Desktop/美团/data/applications.json)：本地数据存储
+- [seed-applications.json](/Users/lkd/Desktop/美团/data/seed-applications.json)：演示初始数据
 - [package.json](/Users/lkd/Desktop/美团/package.json)：启动脚本
+- [DELIVERABLES.md](/Users/lkd/Desktop/美团/docs/DELIVERABLES.md)：交付清单
+- [PRODUCT-DESIGN.md](/Users/lkd/Desktop/美团/docs/PRODUCT-DESIGN.md)：产品说明
+- [API.md](/Users/lkd/Desktop/美团/docs/API.md)：接口文档
+- [DEMO-SCRIPT.md](/Users/lkd/Desktop/美团/docs/DEMO-SCRIPT.md)：演示讲稿
+
+## 常用命令
+
+```bash
+node server.js
+node scripts/reset-data.js
+```
+
+如果环境支持 `npm`，也可以使用：
+
+```bash
+npm start
+npm run reset-data
+```
 
 ## 适合测评时的讲解角度
 

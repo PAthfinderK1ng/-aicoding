@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "company": "美团",
+    "role": "产品经理校招",
+    "city": "北京",
+    "type": "校招",
+    "stage": "interview",
+    "deadline": "2026-04-20",
+    "nextAction": "准备二面案例题与业务分析",
+    "industry": "互联网",
+    "channel": "官网投递",
+    "source": "官网 + 内推",
+    "contactName": "张琳",
+    "contactRole": "校园招聘 HR",
+    "contactEmail": "hr-campus@meituan.com",
+    "followUpDate": "2026-04-22",
+    "lastTouched": "2026-04-16",
+    "resumeVersion": "产品经理-v4",
+    "salary": "待沟通",
+    "fitNote": "业务匹配度高，二面重点会看增长与数据分析能力。",
+    "descriptionSnapshot": "负责校园业务方向的需求分析、跨团队推进与数据复盘，需要良好的结构化思维、用户洞察与协同能力。",
+    "notes": "一面通过，面试官重点追问增长案例和数据指标拆解。",
+    "materials": [
+      {
+        "name": "简历",
+        "status": "complete",
+        "version": "产品经理-v4"
+      },
+      {
+        "name": "成绩单",
+        "status": "complete",
+        "version": "中英文盖章版"
+      },
+      {
+        "name": "作品集",
+        "status": "pending",
+        "version": "项目集-v2"
+      }
+    ],
+    "interviews": [
+      {
+        "label": "一面",
+        "date": "2026-04-15",
+        "result": "通过"
+      },
+      {
+        "label": "二面",
+        "date": "2026-04-21",
+        "result": "待进行"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "company": "腾讯",
+    "role": "产品运营培训生",
+    "city": "深圳",
+    "type": "校招",
+    "stage": "applied",
+    "deadline": "2026-04-19",
+    "nextAction": "补充最新版简历并确认网申状态",
+    "industry": "互联网",
+    "channel": "内推链接",
+    "source": "学长内推",
+    "contactName": "李昊",
+    "contactRole": "部门内推人",
+    "contactEmail": "lihao@tencent.com",
+    "followUpDate": "2026-04-20",
+    "lastTouched": "2026-04-14",
+    "resumeVersion": "运营培训生-v3",
+    "salary": "待沟通",
+    "fitNote": "岗位开放度高，但当前材料完整度不够，容易丢分。",
+    "descriptionSnapshot": "岗位要求对内容运营、数据敏感度和跨部门沟通有较高要求，需要具备项目经历和结果导向意识。",
+    "notes": "投递量较大，建议先补齐作品案例，再通过内推人跟进状态。",
+    "materials": [
+      {
+        "name": "简历",
+        "status": "pending",
+        "version": "运营培训生-v3"
+      },
+      {
+        "name": "成绩单",
+        "status": "complete",
+        "version": "中英文盖章版"
+      },
+      {
+        "name": "作品集",
+        "status": "missing",
+        "version": "待上传"
+      }
+    ],
+    "interviews": []
+  },
+  {
+    "id": 3,
+    "company": "字节跳动",
+    "role": "商业分析实习生",
+    "city": "上海",
+    "type": "实习",
+    "stage": "written-test",
+    "deadline": "2026-04-24",
+    "nextAction": "今晚完成在线测评并记录题型",
+    "industry": "互联网",
+    "channel": "Boss 直聘",
+    "source": "Boss 职位收藏转投递",
+    "contactName": "系统通知",
+    "contactRole": "平台消息",
+    "contactEmail": "campus@bytedance.com",
+    "followUpDate": "2026-04-23",
+    "lastTouched": "2026-04-18",
+    "resumeVersion": "商业分析实习-v2",
+    "salary": "250-300/天",
+    "fitNote": "JD 匹配度高，测评完成度将直接影响后续面试机会。",
+    "descriptionSnapshot": "需要具备 SQL/Excel 基础、业务分析能力和跨团队协作意识，侧重增长分析和策略支持。",
+    "notes": "测评预计 45 分钟，包含数据判断题和案例阅读。",
+    "materials": [
+      {
+        "name": "简历",
+        "status": "complete",
+        "version": "商业分析实习-v2"
+      },
+      {
+        "name": "成绩单",
+        "status": "complete",
+        "version": "电子版"
+      },
+      {
+        "name": "作品集",
+        "status": "complete",
+        "version": "分析案例-v1"
+      }
+    ],
+    "interviews": [
+      {
+        "label": "在线测评",
+        "date": "2026-04-19",
+        "result": "待完成"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "company": "小红书",
+    "role": "社区运营实习生",
+    "city": "上海",
+    "type": "实习",
+    "stage": "wishlist",
+    "deadline": "2026-04-22",
+    "nextAction": "完善社区案例与自我介绍视频后投递",
+    "industry": "内容社区",
+    "channel": "官网投递",
+    "source": "官网职位页",
+    "contactName": "待补充",
+    "contactRole": "待确认",
+    "contactEmail": "campus@xiaohongshu.com",
+    "followUpDate": "",
+    "lastTouched": "2026-04-17",
+    "resumeVersion": "社区运营-v2",
+    "salary": "180-220/天",
+    "fitNote": "内容调性匹配，但案例素材需要再补充。",
+    "descriptionSnapshot": "岗位偏重社区内容策划、活动运营和用户洞察，需要熟悉平台生态并能输出活动方案。",
+    "notes": "适合作为内容方向重点冲刺岗位，当前最大的阻碍是案例完整度不足。",
+    "materials": [
+      {
+        "name": "简历",
+        "status": "complete",
+        "version": "社区运营-v2"
+      },
+      {
+        "name": "作品集",
+        "status": "pending",
+        "version": "社区项目集-v2"
+      },
+      {
+        "name": "自我介绍视频",
+        "status": "missing",
+        "version": "待录制"
+      }
+    ],
+    "interviews": []
+  },
+  {
+    "id": 5,
+    "company": "阿里巴巴",
+    "role": "数据产品经理",
+    "city": "杭州",
+    "type": "校招",
+    "stage": "offer",
+    "deadline": "2026-04-05",
+    "nextAction": "确认 offer 截止时间并准备谈薪问题",
+    "industry": "互联网",
+    "channel": "官网投递",
+    "source": "官网 + 校招群",
+    "contactName": "王晨",
+    "contactRole": "招聘 HRBP",
+    "contactEmail": "campus@alibaba-inc.com",
+    "followUpDate": "2026-04-19",
+    "lastTouched": "2026-04-17",
+    "resumeVersion": "数据产品-v5",
+    "salary": "年包待确认",
+    "fitNote": "进入 offer 阶段，主要问题从“能不能拿到”转为“该不该接受”。",
+    "descriptionSnapshot": "聚焦数据产品规划、业务需求拆解和指标体系搭建，需要较强的数据分析和跨部门沟通能力。",
+    "notes": "已进入 offer 阶段，建议对比城市、团队方向和成长空间。",
+    "materials": [
+      {
+        "name": "简历",
+        "status": "complete",
+        "version": "数据产品-v5"
+      },
+      {
+        "name": "成绩单",
+        "status": "complete",
+        "version": "中英文盖章版"
+      },
+      {
+        "name": "作品集",
+        "status": "complete",
+        "version": "数据产品案例-v2"
+      }
+    ],
+    "interviews": [
+      {
+        "label": "一面",
+        "date": "2026-04-07",
+        "result": "通过"
+      },
+      {
+        "label": "二面",
+        "date": "2026-04-10",
+        "result": "通过"
+      },
+      {
+        "label": "HR 面",
+        "date": "2026-04-14",
+        "result": "通过"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "company": "华为",
+    "role": "经营管理岗",
+    "city": "深圳",
+    "type": "校招",
+    "stage": "closed",
+    "deadline": "2026-04-03",
+    "nextAction": "复盘群面表现，优化下次案例表达",
+    "industry": "科技制造",
+    "channel": "官网投递",
+    "source": "官网职位页",
+    "contactName": "赵宁",
+    "contactRole": "校招 HR",
+    "contactEmail": "campus@huawei.com",
+    "followUpDate": "",
+    "lastTouched": "2026-04-02",
+    "resumeVersion": "经营管理-v2",
+    "salary": "待沟通",
+    "fitNote": "岗位方向匹配，但群面节奏和案例表达是主要短板。",
+    "descriptionSnapshot": "岗位需要较强的商业判断、项目推进和跨团队协作能力，群面环节尤其看重结构化表达。",
+    "notes": "群面节奏偏快，后续可强化框架表达和时间控制。",
+    "materials": [
+      {
+        "name": "简历",
+        "status": "complete",
+        "version": "经营管理-v2"
+      },
+      {
+        "name": "成绩单",
+        "status": "complete",
+        "version": "电子版"
+      }
+    ],
+    "interviews": [
+      {
+        "label": "群面",
+        "date": "2026-04-01",
+        "result": "未通过"
+      }
+    ]
+  }
+]
