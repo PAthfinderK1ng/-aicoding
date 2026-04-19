@@ -245,6 +245,7 @@ const useApi = window.location.protocol !== "file:";
 
 const state = {
   selectedId: seedApplications[0].id,
+  activeView: "overview",
   filters: {
     search: "",
     type: "all",
@@ -275,7 +276,9 @@ const elements = {
   openAdd: document.getElementById("open-add"),
   closeDialog: document.getElementById("close-dialog"),
   cancelDialog: document.getElementById("cancel-dialog"),
-  focusUrgent: document.getElementById("focus-urgent")
+  focusUrgent: document.getElementById("focus-urgent"),
+  viewTabs: document.querySelectorAll("[data-view-tab]"),
+  viewPanels: document.querySelectorAll("[data-view-panel]")
 };
 
 function parseDate(dateString) {
@@ -523,6 +526,18 @@ function getFilteredApplications() {
       state.filters.stage === "all" || application.stage === state.filters.stage;
 
     return searchMatch && typeMatch && priorityMatch && materialMatch && stageMatch;
+  });
+}
+
+function setActiveView(view) {
+  state.activeView = view;
+
+  elements.viewTabs.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.viewTab === view);
+  });
+
+  elements.viewPanels.forEach((panel) => {
+    panel.classList.toggle("is-active", panel.dataset.viewPanel === view);
   });
 }
 
@@ -980,6 +995,7 @@ function bindBoardEvents() {
   cards.forEach((card) => {
     card.addEventListener("click", () => {
       state.selectedId = Number(card.dataset.id);
+      setActiveView("insights");
       render();
     });
 
@@ -1058,27 +1074,38 @@ function render() {
 function bindControls() {
   elements.searchInput.addEventListener("input", (event) => {
     state.filters.search = event.target.value.trim();
+    setActiveView("board");
     render();
   });
 
   elements.typeFilter.addEventListener("change", (event) => {
     state.filters.type = event.target.value;
+    setActiveView("board");
     render();
   });
 
   elements.priorityFilter.addEventListener("change", (event) => {
     state.filters.priority = event.target.value;
+    setActiveView("board");
     render();
   });
 
   elements.materialFilter.addEventListener("change", (event) => {
     state.filters.materials = event.target.value;
+    setActiveView("board");
     render();
   });
 
   elements.stageFilter.addEventListener("change", (event) => {
     state.filters.stage = event.target.value;
+    setActiveView("board");
     render();
+  });
+
+  elements.viewTabs.forEach((button) => {
+    button.addEventListener("click", () => {
+      setActiveView(button.dataset.viewTab);
+    });
   });
 
   elements.openAdd.addEventListener("click", () => {
@@ -1151,6 +1178,7 @@ function bindControls() {
   elements.focusUrgent.addEventListener("click", () => {
     state.filters.priority = "high";
     elements.priorityFilter.value = "high";
+    setActiveView("board");
     render();
   });
 }
@@ -1158,6 +1186,7 @@ function bindControls() {
 async function init() {
   bindControls();
   await loadApplications();
+  setActiveView(state.activeView);
   render();
 }
 

@@ -37,101 +37,117 @@
       </header>
 
       <main class="dashboard">
-        <section class="stats-grid" id="stats-grid"></section>
+        <nav class="section-tabs" aria-label="页面分栏">
+          <button class="section-tab is-active" type="button" data-view-tab="overview">
+            总览
+          </button>
+          <button class="section-tab" type="button" data-view-tab="board">
+            申请看板
+          </button>
+          <button class="section-tab" type="button" data-view-tab="insights">
+            时间线与详情
+          </button>
+        </nav>
 
-        <section class="action-grid">
-          <article class="card action-card">
-            <div class="section-heading section-heading--compact">
-              <div>
-                <p class="section-heading__eyebrow">Action Center</p>
-                <h2>今日优先处理</h2>
-              </div>
-            </div>
-            <div id="priority-queue" class="action-list"></div>
-          </article>
+        <section class="view-panel is-active" data-view-panel="overview">
+          <section class="stats-grid" id="stats-grid"></section>
 
-          <article class="card action-card">
-            <div class="section-heading section-heading--compact">
-              <div>
-                <p class="section-heading__eyebrow">Follow Up</p>
-                <h2>待跟进列表</h2>
+          <section class="action-grid">
+            <article class="card action-card">
+              <div class="section-heading section-heading--compact">
+                <div>
+                  <p class="section-heading__eyebrow">Action Center</p>
+                  <h2>今日优先处理</h2>
+                </div>
               </div>
-            </div>
-            <div id="followup-queue" class="action-list"></div>
-          </article>
+              <div id="priority-queue" class="action-list"></div>
+            </article>
 
-          <article class="card action-card">
-            <div class="section-heading section-heading--compact">
-              <div>
-                <p class="section-heading__eyebrow">Materials Hub</p>
-                <h2>材料与版本</h2>
+            <article class="card action-card">
+              <div class="section-heading section-heading--compact">
+                <div>
+                  <p class="section-heading__eyebrow">Follow Up</p>
+                  <h2>待跟进列表</h2>
+                </div>
               </div>
-            </div>
-            <div id="materials-hub" class="action-list"></div>
-          </article>
+              <div id="followup-queue" class="action-list"></div>
+            </article>
+
+            <article class="card action-card">
+              <div class="section-heading section-heading--compact">
+                <div>
+                  <p class="section-heading__eyebrow">Materials Hub</p>
+                  <h2>材料与版本</h2>
+                </div>
+              </div>
+              <div id="materials-hub" class="action-list"></div>
+            </article>
+          </section>
         </section>
 
-        <section class="toolbar">
-          <div class="toolbar__group toolbar__search">
-            <label for="search-input">搜索岗位</label>
-            <input
-              id="search-input"
-              type="search"
-              placeholder="搜索公司、岗位、城市"
-            />
-          </div>
-          <div class="toolbar__group">
-            <label for="type-filter">类型</label>
-            <select id="type-filter">
-              <option value="all">全部</option>
-              <option value="校招">校招</option>
-              <option value="实习">实习</option>
-            </select>
-          </div>
-          <div class="toolbar__group">
-            <label for="priority-filter">优先级</label>
-            <select id="priority-filter">
-              <option value="all">全部</option>
-              <option value="high">高优先级</option>
-              <option value="medium">中优先级</option>
-              <option value="low">低优先级</option>
-            </select>
-          </div>
-          <div class="toolbar__group">
-            <label for="material-filter">材料</label>
-            <select id="material-filter">
-              <option value="all">全部</option>
-              <option value="missing">有缺失</option>
-              <option value="complete">已齐全</option>
-            </select>
-          </div>
-          <div class="toolbar__group">
-            <label for="stage-filter">阶段</label>
-            <select id="stage-filter">
-              <option value="all">全部</option>
-              <option value="wishlist">待申请</option>
-              <option value="applied">已投递</option>
-              <option value="written-test">笔试中</option>
-              <option value="interview">面试中</option>
-              <option value="offer">Offer</option>
-              <option value="closed">已结束</option>
-            </select>
-          </div>
-        </section>
+        <section class="view-panel" data-view-panel="board">
+          <section class="toolbar">
+            <div class="toolbar__group toolbar__search">
+              <label for="search-input">搜索岗位</label>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="搜索公司、岗位、城市"
+              />
+            </div>
+            <div class="toolbar__group">
+              <label for="type-filter">类型</label>
+              <select id="type-filter">
+                <option value="all">全部</option>
+                <option value="校招">校招</option>
+                <option value="实习">实习</option>
+              </select>
+            </div>
+            <div class="toolbar__group">
+              <label for="priority-filter">优先级</label>
+              <select id="priority-filter">
+                <option value="all">全部</option>
+                <option value="high">高优先级</option>
+                <option value="medium">中优先级</option>
+                <option value="low">低优先级</option>
+              </select>
+            </div>
+            <div class="toolbar__group">
+              <label for="material-filter">材料</label>
+              <select id="material-filter">
+                <option value="all">全部</option>
+                <option value="missing">有缺失</option>
+                <option value="complete">已齐全</option>
+              </select>
+            </div>
+            <div class="toolbar__group">
+              <label for="stage-filter">阶段</label>
+              <select id="stage-filter">
+                <option value="all">全部</option>
+                <option value="wishlist">待申请</option>
+                <option value="applied">已投递</option>
+                <option value="written-test">笔试中</option>
+                <option value="interview">面试中</option>
+                <option value="offer">Offer</option>
+                <option value="closed">已结束</option>
+              </select>
+            </div>
+          </section>
 
-        <section class="content-grid">
-          <section class="board-panel">
+          <section class="board-panel board-panel--full">
             <div class="section-heading">
               <div>
                 <p class="section-heading__eyebrow">Flow Board</p>
                 <h2>申请进度总览</h2>
               </div>
-              <p class="section-heading__note">支持拖拽流转，详情内可继续查看 JD、简历版本与跟进动作</p>
+              <p class="section-heading__note">拖拽更新阶段，点击卡片后自动进入详情分栏</p>
             </div>
             <div id="kanban-board" class="kanban-board"></div>
           </section>
+        </section>
 
-          <aside class="side-panel">
+        <section class="view-panel" data-view-panel="insights">
+          <section class="insights-grid">
             <section class="card">
               <div class="section-heading section-heading--compact">
                 <div>
@@ -153,7 +169,7 @@
                 点击任意岗位卡片查看详细信息。
               </div>
             </section>
-          </aside>
+          </section>
         </section>
       </main>
     </div>

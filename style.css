@@ -207,6 +207,45 @@ h1 {
   padding: 0 22px;
 }
 
+.section-tabs {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  position: sticky;
+  top: 12px;
+  z-index: 4;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 242, 0.78);
+  backdrop-filter: blur(20px);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  width: fit-content;
+}
+
+.section-tab {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.section-tab.is-active {
+  background: linear-gradient(135deg, var(--primary), #e98c53);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(214, 93, 56, 0.2);
+}
+
+.view-panel {
+  display: none;
+  gap: 22px;
+}
+
+.view-panel.is-active {
+  display: grid;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -333,9 +372,19 @@ h1 {
   gap: 20px;
 }
 
+.insights-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.35fr);
+  gap: 20px;
+}
+
 .board-panel,
 .card {
   padding: 18px;
+}
+
+.board-panel--full {
+  min-height: 680px;
 }
 
 .section-heading {
@@ -739,7 +788,8 @@ h1 {
 
 @media (max-width: 1180px) {
   .hero,
-  .content-grid {
+  .content-grid,
+  .insights-grid {
     grid-template-columns: 1fr;
   }
 
@@ -784,6 +834,16 @@ h1 {
   .hero__actions,
   .dialog-actions {
     flex-direction: column;
+  }
+
+  .section-tabs {
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 24px;
+  }
+
+  .section-tab {
+    flex: 1;
   }
 
   .kanban-board {
